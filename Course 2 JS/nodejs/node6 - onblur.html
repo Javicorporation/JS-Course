@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>holaaaa</h4>
+    ingrese su nombre <br>
+
+    <input type="text" id="nombre" onfocus="F_focus()" onblur="F_blur()">
+
+    <script>
+        function F_focus() {
+            document.getElementById("nombre").value=="";  
+            document.getElementById("nombre").style.background = "";          
+        }
+
+        function F_blur() {
+            if (document.getElementById("nombre").value=="") {
+                document.getElementById("nombre").style.background = "red";
+                alert("Ingresa un valor que el campo de texto no esta por gusto, gracias.")
+            }
+        }
+    </script>
+</body>
+</html>
