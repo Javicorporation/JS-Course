@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+<body>
+    <h4>texto en area</h4>
+
+    <!-- crea un  textarea que este conectado a una funcion  la cual me envien un mensaje cuando exceda la longitud de caracteres
+     -->
+    <form >
+        <p><textarea id="comentarios" rows="20" cols="40"></textarea></p>
+        <input type="button" value="enviar" onclick="comentar()">
+    </form>
+
+    <script>
+        // para hacer que el usuario no pueda modificar el text area puedes hacer esto: 
+        
+        /*let area = document.getElementById("comentarios");
+        area.style.resize = "none";
+        */
+        function comentar() {
+            if (document.getElementById("comentarios").value.length > 100) {
+                swal("esta muy largo");
+            }else{
+                swal("gracias");
+            }
+        }
+    </script>
+    
+    
+</body>
+</html>

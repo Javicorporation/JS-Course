@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+<body>
+    <h4>seleccionador de horario</h4>
+
+    <!-- escribir un script y conectarlo a un  radio en html  -->
+    <form >
+    <input type="radio" id="radio1" name="radio1">matutina <br>
+    <input type="radio" id="radio2" name="radio2">vespertina <br>
+    <input type="radio" id="radio3" name="radio3">nocturna <br>
+    <input type="radio" id="radio4" name="radio4">hibrida <br>
+    <br><br>
+    <input type="button" value="confirmar" onclick="elegir()">
+
+    </form>
+
+    <script>
+        function elegir() {
+            if (document.getElementById("radio1").checked) {
+                swal("su horario es de 07: 00 a 12:00")
+            }
+            if (document.getElementById("radio2").checked) {
+                swal("su horario es de 13: 00 a 17:00")
+            }
+            if (document.getElementById("radio3").checked) {
+                swal("su horario es de 18: 00 a 22:00")
+            }
+            if (document.getElementById("radio4").checked) {
+                swal("su horario esta n distintas horas")
+            }
+            //(document.getElementById("radio2").checked)?"su horario es de 13: 00 a 17:00"
+
+            
+        }
+    </script>
+</body>
+</html>
